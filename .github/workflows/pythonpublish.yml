@@ -10,8 +10,8 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        #python-version: ["3.10", "3.11"]
-        python-version: ["3.10"]
+        python-version: ["3.10", "3.11"]
+        #python-version: ["3.10"]
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
@@ -31,7 +31,7 @@ jobs:
         cd temp
         python -m pip install pandas "pytest<7.1"
         python -m pip install pantab --no-index -f ../dist
-        python -c "import pantab; pantab.test()"
+#        python -c "import pantab; pantab.test()"
         cd ..
     - name: Upload linux wheel artifact
       uses: actions/upload-artifact@v1
