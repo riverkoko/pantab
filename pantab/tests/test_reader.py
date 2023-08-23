@@ -16,6 +16,7 @@ def test_read_doesnt_modify_existing_file(df, tmp_hyper):
 
     # Neither should not update file stats
     # assert last_modified == tmp_hyper.stat().st_mtime
+    1
 
 
 def test_reports_unsupported_type(datapath):
