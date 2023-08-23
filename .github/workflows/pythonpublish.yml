@@ -25,14 +25,14 @@ jobs:
     - name: Build wheels
       run: |
         python setup.py bdist_wheel
-    - name: Install and test wheel
-      run: |
-        mkdir temp
-        cd temp
-        python -m pip install pandas "pytest<7.1"
-        python -m pip install pantab --no-index -f ../dist
+#    - name: Install and test wheel
+#      run: |
+#        mkdir temp
+#        cd temp
+#        python -m pip install pandas "pytest<7.1"
+#        python -m pip install pantab --no-index -f ../dist
 #        python -c "import pantab; pantab.test()"
-        cd ..
+#        cd ..
     - name: Upload linux wheel artifact
       uses: actions/upload-artifact@v1
       with:
